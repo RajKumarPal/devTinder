@@ -2,17 +2,27 @@ const express = require("express");
 
 const app = express();
 
-app.get("/hello",(req,res)=>{
-    res.send("Helllo Helllo");
-});
+// app.get(/.*fly$/,(req,res)=>{
+//     res.send({ firstname:"Raj Kumar", lastname:"Pal" });
+// });
 
-app.get("/test",(req,res)=>{
-    res.send("Testing Routes Call");
-});
+// fly buterfly
 
-app.use("/",(req,res)=>{
-    res.send("Servers are Readys");
-});
+// app.get(/\/ab?c/,(req,res)=>{
+//     console.log(`Server Listen Port ${3000}`);
+//     res.send({firstname:"Raj Kumar",lastname:"Pal"});
+// })
+// // abc ac 
+// app.get(/\/ab+c/,(req,res)=>{
+//     res.send({firstname:"Rajesh",lastname:"Pal"});
+// });
+
+// // abc abbbbc abbbbbbbbbc
+
+app.get(/\/ab+cd/,(req,res)=>{
+    console.log(`Server Listen Port ${3000}`);
+    res.send({firstname:"Raj Kumar",lastname:"Pal"});
+})
 
 app.listen(3000,()=>{
     console.log(`Server Listen Port ${3000}`);
